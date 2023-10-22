@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 export default function Index() {
   const [logo, setLogo] = useState("");
+  const { countCartItems } = useContext(CartContext)
 
   useEffect(() => {
     const storeName = process.env.REACT_APP_NAME || 'Loja online';
@@ -16,7 +18,7 @@ export default function Index() {
           <Link to="/" className='text-decoration-none text-dark'>
             <h1>{logo}</h1>
           </Link>
-          <Link to="/carrinho" className='btn btn-outline-secondary text-decoration-none'>Carrinho [0]</Link>
+          <Link to="/carrinho" className='btn btn-outline-secondary text-decoration-none'>Carrinho [{countCartItems()}]</Link>
         </div>
       </div>
     </div>

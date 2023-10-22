@@ -16,9 +16,11 @@ import OurHistory from './pages/OurHistory';
 import Politics from './pages/Politics';
 import Press from './pages/Press';
 import TermsOfUse from './pages/TermsOfUse';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
+    <CartProvider>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/sobre" component={About} />
@@ -33,7 +35,8 @@ function App() {
       <Route exact path="/termos-de-uso" component={TermsOfUse} />
       <Route path="/details/:id" component={Details} />
       <Route path="*" component={NotFound} />
-    </Switch>
+      </Switch>
+    </CartProvider>
   );
 }
 

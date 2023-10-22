@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from '../Image';
 import { valueToReal } from '../../utils/utils';
+import { CartContext } from '../../context/CartContext';
 
 export default function Index({ product }) {
+  const { cartItems, addCartItem } = useContext(CartContext);
+  console.log({cartItems})
   return (
     <div className='container'>
       <div className="row">
@@ -15,7 +18,7 @@ export default function Index({ product }) {
           <p>{product.descricao} &hellip; </p>
           <h3>{valueToReal(product.preco)}</h3>
 
-          <button className='btn btn-outline-success'>Adicionar no carrinho</button>
+          <button className='btn btn-outline-success' onClick={() => addCartItem(product)}>Adicionar no carrinho</button>
         </div>
       </div>
 
