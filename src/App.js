@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Details from './pages/Details';
+import Contact from './pages/Contact';
+import HowToBuy from './pages/HowToBuy';
+import Politics from './pages/Politics';
+import TermsOfUse from './pages/TermsOfUse';
+import OurHistory from './pages/OurHistory';
+import FAQ from './pages/FAQ';
+import Press from './pages/Press';
+import Cart from './pages/Cart';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/sobre" component={About} />
+      <Route exact path="/contato" component={Contact} />
+      <Route exact path="/como-comprar" component={HowToBuy} />
+      <Route exact path="/nossa-historia" component={OurHistory} />
+      <Route exact path="/carrinho" component={Cart} />
+      <Route exact path="/imprensa" component={Press} />
+      <Route exact path="/faq" component={FAQ} />
+      <Route exact path="/nao-encontrado" component={NotFound} />
+      <Route exact path="/politicas-do-site" component={Politics} />
+      <Route exact path="/termos-de-uso" component={TermsOfUse} />
+      <Route path="/details/:id" component={Details} />
+      <Route path="*" component={NotFound} />
+    </Switch>
   );
 }
 
