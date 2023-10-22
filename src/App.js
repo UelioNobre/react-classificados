@@ -4,18 +4,18 @@ import {
   Route,
 } from "react-router-dom";
 
-import Home from './pages/Home';
 import About from './pages/About';
-import Details from './pages/Details';
-import Contact from './pages/Contact';
-import HowToBuy from './pages/HowToBuy';
-import Politics from './pages/Politics';
-import TermsOfUse from './pages/TermsOfUse';
-import OurHistory from './pages/OurHistory';
-import FAQ from './pages/FAQ';
-import Press from './pages/Press';
 import Cart from './pages/Cart';
+import Contact from './pages/Contact';
+import Details from './pages/Details';
+import FAQ from './pages/FAQ';
+import Home from './pages/Home';
+import HowToBuy from './pages/HowToBuy';
 import NotFound from './pages/NotFound';
+import OurHistory from './pages/OurHistory';
+import Politics from './pages/Politics';
+import Press from './pages/Press';
+import TermsOfUse from './pages/TermsOfUse';
 
 function App() {
   return (
