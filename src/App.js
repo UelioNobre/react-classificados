@@ -13,7 +13,7 @@ import Home from './pages/Home';
 import HowToBuy from './pages/HowToBuy';
 import NotFound from './pages/NotFound';
 import OurHistory from './pages/OurHistory';
-import Politics from './pages/Politics';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import Press from './pages/Press';
 import TermsOfUse from './pages/TermsOfUse';
 import { CartProvider } from './context/CartContext';
@@ -31,7 +31,7 @@ function App() {
       <Route exact path="/imprensa" component={Press} />
       <Route exact path="/faq" component={FAQ} />
       <Route exact path="/nao-encontrado" component={NotFound} />
-      <Route exact path="/politicas-do-site" component={Politics} />
+      <Route exact path="/politicas-do-site" component={PrivacyPolicy} />
       <Route exact path="/termos-de-uso" component={TermsOfUse} />
       <Route path="/details/:id" component={Details} />
       <Route path="*" component={NotFound} />

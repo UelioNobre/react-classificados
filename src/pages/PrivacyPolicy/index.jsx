@@ -9,17 +9,17 @@ export default function Index() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, []);
-
+  
   return (
-    <div>
+    <>
       <Header />
       <Navbar />
 
       <Hero>
-        <h1>Termos de uso</h1>
+        <h1>Politicas do Site</h1>
       </Hero>
 
       <Footer />
-    </div>
+    </>
   )
 }

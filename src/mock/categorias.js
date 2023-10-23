@@ -1,4 +1,4 @@
-export const categorias = [
+export const categoriasMock = [
   {
     id: 1,
     name: 'Temperos',

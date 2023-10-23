@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Image from '../../components/Image'
+import Hero from '../../components/Hero'
 import { getRandImage } from '../../utils/utils'
 
-export default function index() {
+export default function Index() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }, []);
+
   return (
     <div>
       <Header />
       <Navbar />
+      <Hero>
+        <h1>Nossa história</h1>
+      </Hero>
 
       <div className="container my-3 py-3">
-        <h1>Nossa história</h1>
         <p>
           Fundada em 2005 por um grupo de entusiastas da tecnologia, a "Loja Online 1.0" teve seu início modesto como uma pequena loja de eletrônicos em uma área local. A visão por trás da empresa era criar um espaço onde os clientes pudessem encontrar os mais recentes produtos tecnológicos a preços acessíveis, enquanto desfrutavam de um atendimento personalizado. Desde o início, a paixão pela inovação tecnológica e o compromisso com a satisfação do cliente foram os pilares da empresa.
         </p>
