@@ -4,6 +4,7 @@ import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import EmptyCart from '../../components/EmptyCart'
+import Frete from '../../components/Frete'
 import { CartContext } from '../../context/CartContext'
 import { valueToReal } from '../../utils/utils'
 
@@ -17,8 +18,6 @@ export default function Index() {
 
       <div className="container my-3 py-3">
         <h1>Carrinho</h1>
-
-
         <div className='border p-4'>
           {countCartItems() <= 0 ? <EmptyCart /> : <></>}
 
@@ -55,10 +54,11 @@ export default function Index() {
           ))}
 
           {countCartItems() > 0 ? (
-            <div>
+            <>
+              <Frete />
               <hr />
               Total geral: <strong>{valueToReal(totalAmount())}</strong>
-            </div>
+            </>
           ) : <></>}
         </div>
       </div>
