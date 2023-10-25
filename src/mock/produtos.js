@@ -11,7 +11,8 @@ export const productsMock = [
     comprimento_caixa_mm: 55,
     peso_gramas: 200,
     data_adicionado: '2015-04-11 20:58:37',
-    ativo: 1
+    ativo: 1,
+    category: 1
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ export const productsMock = [
     comprimento_caixa_mm: 120,
     peso_gramas: 450,
     data_adicionado: '2015-04-11 21:00:20',
-    ativo: 1
+    ativo: 1,
+    category: 1
   },
   {
     id: 3,
@@ -37,7 +39,8 @@ export const productsMock = [
     comprimento_caixa_mm: 300,
     peso_gramas: 3600,
     data_adicionado: '2015-04-11 21:03:16',
-    ativo: 1
+    ativo: 1,
+    category: 1
   },
   {
     id: 4,
@@ -50,7 +53,8 @@ export const productsMock = [
     comprimento_caixa_mm: 120,
     peso_gramas: 300,
     data_adicionado: '2015-04-11 21:09:48',
-    ativo: 1
+    ativo: 1,
+    category: 1
   },
   {
     id: 5,
@@ -63,7 +67,8 @@ export const productsMock = [
     comprimento_caixa_mm: 100,
     peso_gramas: 100,
     data_adicionado: '2015-04-11 21:15:44',
-    ativo: 1
+    ativo: 1,
+    category: 1
   },
   {
     id: 6,
@@ -76,7 +81,8 @@ export const productsMock = [
     comprimento_caixa_mm: 120,
     peso_gramas: 350,
     data_adicionado: '2015-04-11 21:18:32',
-    ativo: 1
+    ativo: 1,
+    category: 6
   },
   {
     id: 7,
@@ -89,7 +95,8 @@ export const productsMock = [
     comprimento_caixa_mm: 250,
     peso_gramas: 400,
     data_adicionado: '2015-04-11 21:21:10',
-    ativo: 1
+    ativo: 1,
+    category: 2
   },
   {
     id: 8,
@@ -102,7 +109,8 @@ export const productsMock = [
     comprimento_caixa_mm: 120,
     peso_gramas: 350,
     data_adicionado: '2015-04-11 21:24:53',
-    ativo: 1
+    ativo: 1,
+    category: 2
   },
   {
     id: 9,
@@ -115,7 +123,8 @@ export const productsMock = [
     comprimento_caixa_mm: 120,
     peso_gramas: 120,
     data_adicionado: '2015-04-11 21:28:15',
-    ativo: 1
+    ativo: 1,
+    category: 2
   },
   {
     id: 10,
@@ -128,7 +137,8 @@ export const productsMock = [
     comprimento_caixa_mm: 80,
     peso_gramas: 120,
     data_adicionado: '2015-04-11 21:32:29',
-    ativo: 1
+    ativo: 1,
+    category: 2
   },
   {
     id: 11,
@@ -141,7 +151,8 @@ export const productsMock = [
     comprimento_caixa_mm: 400,
     peso_gramas: 380,
     data_adicionado: '2015-04-11 21:36:21',
-    ativo: 1
+    ativo: 1,
+    category: 3
   },
   {
     id: 12,
@@ -154,7 +165,8 @@ export const productsMock = [
     comprimento_caixa_mm: 300,
     peso_gramas: 200,
     data_adicionado: '2015-04-11 21:40:10',
-    ativo: 1
+    ativo: 1,
+    category: 3
   },
   {
     id: 13,
@@ -167,7 +179,8 @@ export const productsMock = [
     comprimento_caixa_mm: 240,
     peso_gramas: 360,
     data_adicionado: '2015-04-11 21:43:33',
-    ativo: 1
+    ativo: 1,
+    category: 3
   },
   {
     id: 14,
@@ -180,7 +193,8 @@ export const productsMock = [
     comprimento_caixa_mm: 180,
     peso_gramas: 980,
     data_adicionado: '2015-04-11 21:49:39',
-    ativo: 1
+    ativo: 1,
+    category: 4
   },
   {
     id: 15,
@@ -193,7 +207,8 @@ export const productsMock = [
     comprimento_caixa_mm: 180,
     peso_gramas: 990,
     data_adicionado: '2015-04-11 21:57:55',
-    ativo: 1
+    ativo: 1,
+    category: 4
   },
   {
     id: 16,
@@ -206,7 +221,8 @@ export const productsMock = [
     comprimento_caixa_mm: 250,
     peso_gramas: 1540,
     data_adicionado: '2015-04-11 22:00:39',
-    ativo: 1
+    ativo: 1,
+    category: 4
   },
   {
     id: 17,
@@ -219,7 +235,8 @@ export const productsMock = [
     comprimento_caixa_mm: 320,
     peso_gramas: 850,
     data_adicionado: '2015-04-12 10:14:16',
-    ativo: 1
+    ativo: 1,
+    category: 5
   },
   {
     id: 18,
@@ -232,7 +249,8 @@ export const productsMock = [
     comprimento_caixa_mm: 320,
     peso_gramas: 700,
     data_adicionado: '2015-04-12 10:20:20',
-    ativo: 1
+    ativo: 1,
+    category: 5
   },
   {
     id: 19,
@@ -245,7 +263,8 @@ export const productsMock = [
     comprimento_caixa_mm: 340,
     peso_gramas: 1450,
     data_adicionado: '2015-04-12 10:25:32',
-    ativo: 1
+    ativo: 1,
+    category: 5
   },
   {
     id: 20,
@@ -258,7 +277,8 @@ export const productsMock = [
     comprimento_caixa_mm: 340,
     peso_gramas: 1200,
     data_adicionado: '2015-04-12 10:37:34',
-    ativo: 1
+    ativo: 1,
+    category: 5
   },
   {
     id: 21,
@@ -271,7 +291,8 @@ export const productsMock = [
     comprimento_caixa_mm: 400,
     peso_gramas: 1050,
     data_adicionado: '2015-04-12 10:43:30',
-    ativo: 1
+    ativo: 1,
+    category: 6
   },
   {
     id: 22,
@@ -284,7 +305,8 @@ export const productsMock = [
     comprimento_caixa_mm: 400,
     peso_gramas: 1050,
     data_adicionado: '2015-04-12 10:59:51',
-    ativo: 1
+    ativo: 1,
+    category: 6
   },
   {
     id: 23,
@@ -297,7 +319,8 @@ export const productsMock = [
     comprimento_caixa_mm: 400,
     peso_gramas: 1034,
     data_adicionado: '2015-04-12 11:08:52',
-    ativo: 1
+    ativo: 1,
+    category: 6
   },
   {
     id: 24,
@@ -310,6 +333,7 @@ export const productsMock = [
     comprimento_caixa_mm: 400,
     peso_gramas: 1056,
     data_adicionado: '2015-04-12 11:10:52',
-    ativo: 1
+    ativo: 1,
+    category: 6
   }
 ];

@@ -1,7 +1,17 @@
 import { productsMock } from "../mock/produtos";
-import { categoriasMock } from "../mock/categorias";
+import { categoriesMock } from "../mock/categorias";
 
-export const findById = (productId) => {
+/** PRODUCTS */
+function findProductByCategorySlug(categorySlug){
+  const category = findCategoryBySlug(categorySlug);
+  const products = productsMock
+    .filter((p) => p.category === category.id)
+    .map((p) => ({...p, category}));
+
+  return products;
+}
+
+function findById (productId) {
   const product = productsMock.find(p => p.id === productId);
 
   if (!product) {
@@ -10,12 +20,20 @@ export const findById = (productId) => {
   return Promise.resolve(product);
 };
 
+/** CATEGORIES */
+
+function findCategoryBySlug(categorySlug) {
+  const { id, name, slug } = categoriesMock.find((c) => c.slug === categorySlug);
+  const category = { id, name, slug };
+  return category;
+}
+
 function findCategories() {
-  return Promise.resolve(categoriasMock);
+  return Promise.resolve(categoriesMock);
 }
 
 const api = {
-  'products': { findById },
+  'products': { findById, findProductByCategorySlug },
   'categories': { findCategories }
 }
 

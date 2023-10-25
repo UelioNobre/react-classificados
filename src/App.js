@@ -14,29 +14,34 @@ import HowToBuy from './pages/HowToBuy';
 import NotFound from './pages/NotFound';
 import OurHistory from './pages/OurHistory';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import ProductsByCategory from './pages/ProductsByCategory';
 import Press from './pages/Press';
 import TermsOfUse from './pages/TermsOfUse';
 import { CartProvider } from './context/CartContext';
+import { CategoriesProvider } from './context/CategoriesContext';
 
 function App() {
   return (
-    <CartProvider>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/sobre" component={About} />
-      <Route exact path="/contato" component={Contact} />
-      <Route exact path="/como-comprar" component={HowToBuy} />
-      <Route exact path="/nossa-historia" component={OurHistory} />
-      <Route exact path="/carrinho" component={Cart} />
-      <Route exact path="/imprensa" component={Press} />
-      <Route exact path="/faq" component={FAQ} />
-      <Route exact path="/nao-encontrado" component={NotFound} />
-      <Route exact path="/politicas-do-site" component={PrivacyPolicy} />
-      <Route exact path="/termos-de-uso" component={TermsOfUse} />
-      <Route path="/details/:id" component={Details} />
-      <Route path="*" component={NotFound} />
-      </Switch>
-    </CartProvider>
+    <CategoriesProvider>
+      <CartProvider>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/sobre" component={About} />
+          <Route exact path="/contato" component={Contact} />
+          <Route exact path="/como-comprar" component={HowToBuy} />
+          <Route exact path="/nossa-historia" component={OurHistory} />
+          <Route exact path="/carrinho" component={Cart} />
+          <Route exact path="/imprensa" component={Press} />
+          <Route exact path="/faq" component={FAQ} />
+          <Route exact path="/nao-encontrado" component={NotFound} />
+          <Route exact path="/politicas-do-site" component={PrivacyPolicy} />
+          <Route exact path="/termos-de-uso" component={TermsOfUse} />
+          <Route exact path="/details/:id" component={Details} />
+          <Route exact path="/categorias/:slug/" component={ProductsByCategory} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </CartProvider>
+    </CategoriesProvider>
   );
 }
 

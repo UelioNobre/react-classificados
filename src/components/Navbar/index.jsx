@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from "react-router-dom";
+import { CategoriesContext } from '../../context/CategoriesContext';
 
 export default function Index() {
+  const { categories, fetchCategories } = useContext(CategoriesContext);
+
+  useEffect(() => {
+    async function fetchDate() {
+      await fetchCategories();
+    }
+    fetchDate();
+  }, [fetchCategories]);
+
   return (
     <div className='container'>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -22,9 +32,14 @@ export default function Index() {
                   Categorias
                 </Link>
                 <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="/categorias/artesanatos">Artesanato</Link></li>
-                  <li><Link className="dropdown-item" to="/categorias/bonecas">Bonecas</Link></li>
-                  <li><Link className="dropdown-item" to="/categorias/essencias">Essencias</Link></li>
+                  {categories.map((categorie) => (
+                    <li key={categorie.id}>
+                      <Link className="dropdown-item" to={`/categorias/${categorie.slug}`}>
+                        {categorie.name}
+                      </Link>
+                    </li>
+                  ))}
+
                 </ul>
               </li>
             </ul>

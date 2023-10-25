@@ -4,8 +4,7 @@ import { valueToReal } from '../../utils/utils';
 import { CartContext } from '../../context/CartContext';
 
 export default function Index({ product }) {
-  const { cartItems, addCartItem } = useContext(CartContext);
-  console.log({cartItems})
+  const { addCartItem } = useContext(CartContext);
   return (
     <div className='container'>
       <div className="row">
@@ -15,7 +14,6 @@ export default function Index({ product }) {
         <div className="col-12 col-md-6 col-lg-7 my-4">
           <h1>{product.titulo}</h1>
           <small className='text-secondary d-block my-3'><strong>#{product.codigo}</strong></small>
-          <p>{product.descricao} &hellip; </p>
           <h3>{valueToReal(product.preco)}</h3>
 
           <button className='btn btn-outline-success' onClick={() => addCartItem(product)}>Adicionar no carrinho</button>

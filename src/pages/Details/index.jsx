@@ -13,6 +13,7 @@ export default function Index() {
   const history = useHistory();
 
   useEffect(() => {
+
     async function fetch(id) {
       try {
         const products = await API.products.findById(id)
@@ -25,6 +26,8 @@ export default function Index() {
 
     const id = +location.pathname.split('/').pop();
     fetch(id);
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [product, location, history]);
 
   return (

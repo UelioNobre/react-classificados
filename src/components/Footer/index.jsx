@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Index() {
+  const storeName = process.env.REACT_APP_NAME || 'Loja online';
   return (
     <div className='my-3 py-3'>
       <hr />
@@ -11,8 +12,10 @@ export default function Index() {
           <div className="col-12 col-md-12 col-lg-8">
             <div className='row'>
               <div className="col-12 col-sm-6 col-md-4 mb-3">
-                <h5>Loja Virtual</h5>
-                <p>Explore nossa loja virtual para encontrar os melhores produtos! Qualidade, variedade e preços incríveis. Satisfação garantida!</p>
+                <h5>{storeName}</h5>
+                <p>
+                  Sítio Passagem de Pedra, SN<br />
+                  63200-000, Missão Velha, Ceará</p>
               </div>
               <div className="col-12 col-sm-6 col-md-4 mb-3">
                 <h5>Ajuda</h5>
